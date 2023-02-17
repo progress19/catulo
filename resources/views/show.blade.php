@@ -23,7 +23,7 @@
 			<div class="col-md-6">
 				<div class="box-show-int">
 						<img src="{{ asset('pics/shows/large/'.$show->imagen) }}" class="img-fluid" alt="">	
-					<div class="show-incluye">@lang('trans.EL SERVICIO INCLUYE')</div>
+					<div class="show-incluye mt-4">@lang('trans.EL SERVICIO INCLUYE')</div>
 					<hr>
 					<div class="detalle-show">
 						<div class="row">

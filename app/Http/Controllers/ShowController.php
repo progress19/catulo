@@ -139,7 +139,7 @@ class ShowController extends Controller {
                     $filename = rand(0000000,9999999).'.'.$extension;
                     
                     //Resize image
-                    Image::make($image_tmp)->resize(960,600)->save(Fun::getPathImage('large','shows',$filename));
+                    Image::make($image_tmp)->save(Fun::getPathImage('large','shows',$filename));
                 }
 
             } else {$filename = $data['current_imagen'];}

@@ -15,7 +15,7 @@
 		    	<div class="col-md-6">
 			    	<div class="box-show">
 				       	<div class="title">{{ Show::getNombreShow($show->id) }}</div>
-			    	   	<div class="show-incluye">@lang('trans.EL SERVICIO INCLUYE')</div>
+			    	   	<div class="show-incluye mt-3">@lang('trans.EL SERVICIO INCLUYE')</div>
 				    	<hr>
 				    	<div class="detalle-show">
 						<div class="container">
