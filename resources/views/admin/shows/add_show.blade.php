@@ -1,0 +1,168 @@
+@extends('layouts.adminLayout.admin_design')
+@section('content')
+
+      <div class="col-md-8">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2><i class="fa fa-star"></i> Shows /<small>Nuevo</small></h2>
+            <ul class="nav navbar-right panel_toolbox"></ul>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="x_content">
+
+            {{ Form::open([
+              'id' => 'add_show',
+              'name' => 'add_show',
+              'url' => '/admin/add-show/',
+              'role' => 'form',
+              'method' => 'post',
+              'files' => true]) }}
+
+    <div class="tab-idiomas" role="tabpanel" data-example-id="togglable-tabs">
+      
+      <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true"> {{ HTML::image(asset('images/argentina-flag.png'), null, array('class' => 'img-fluid', 'style' => 'height:20px')) }} Español</a>
+        </li>
+        <li role="presentation" class="">
+          <a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">{{ HTML::image(asset('images/united-kingdom-flag.png'), null, array('class' => 'img-fluid', 'style' => 'height:20px')) }} Inglés</a>
+        </li>
+        <li role="presentation" class="">
+          <a href="#tab_content3" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">{{ HTML::image(asset('images/brasil-flag.png'), null, array('class' => 'img-fluid', 'style' => 'height:20px')) }} Portugues</a>
+        </li>
+      </ul>
+
+     
+
+      <div id="myTabContent" class="tab-content">
+       
+        <div role="tabpanel" class="tab-pane fade show active in" id="tab_content1" aria-labelledby="home-tab">
+
+          <div class="col-md-6">
+            <div class="form-group">
+              {!! Form::label('titulo_es', 'Título Español') !!}
+              {!! Form::text('titulo_es', null, ['id' => 'titulo_es', 'class' => 'form-control']) !!}
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+            <div class="col-md-12">
+             <div class="form-group">
+               {!! Form::label('des_es', 'Descripción Español') !!}
+               {!! Form::textarea('des_es', null, ['id' => 'des_es', 'class' => 'form-control']) !!}
+             </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+
+          <div class="col-md-6">
+            <div class="form-group">
+              {!! Form::label('titulo_en', 'Título Inglés') !!}
+              {!! Form::text('titulo_en', null, ['id' => 'titulo_en', 'class' => 'form-control']) !!}
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+            <div class="col-md-12">
+             <div class="form-group">
+               {!! Form::label('des_en', 'Descripción Inglés') !!}
+               {!! Form::textarea('des_en', null, ['id' => 'des_en', 'class' => 'form-control']) !!}
+             </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+
+          <div class="col-md-6">
+            <div class="form-group">
+              {!! Form::label('titulo_pr', 'Título Portugues') !!}
+              {!! Form::text('titulo_pr', null, ['id' => 'titulo_pr', 'class' => 'form-control']) !!}
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+
+            <div class="col-md-12">
+             <div class="form-group">
+               {!! Form::label('des_pr', 'Descripción Portugues') !!}
+               {!! Form::textarea('des_pr', null, ['id' => 'des_pr', 'class' => 'form-control']) !!}
+             </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        {!! Form::label('precio', 'Precio') !!}
+        {!! Form::number('precio', null, ['id' => 'precio', 'class' => 'form-control']) !!}
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        {!! Form::label('imagen', 'Imágen') !!}
+        {!! Form::file('imagen', null, ['id' => 'imagen', 'class' => 'form-control']) !!}
+      </div>
+    </div>
+    
+    <div class="clearfix"></div>  
+
+      <div class="col-md-3">
+        <div class="form-group">
+          {!! Form::label('estado', 'Estado') !!}
+          {!! Form::select('estado', array('1' => 'Activado', '0' => 'Desactivado'), null, ['id' => 'estado', 'class' => 'form-control']); !!}
+        </div>
+      </div>   
+
+      <div class="col-md-12"><div class="ln_solid"></div>
+      <button id="send" type="submit" class="btn btn-success pull-right">Guardar</button>
+    </div>
+
+            {!! Form::close() !!}
+
+          </div>
+        </div>
+      </div>
+
+
+
+@endsection
+
+@section('page-js-script')
+
+<script>
+
+  ClassicEditor
+    .create(document.querySelector('#des_es'))
+    .catch(error=> {console.error(error);})
+
+  ClassicEditor
+    .create(document.querySelector('#des_en'))
+    .catch(error=> {console.error(error);})
+
+  ClassicEditor
+    .create(document.querySelector('#des_pr'))
+    .catch(error=> {console.error(error);})
+
+</script>
+
+@stop
+
