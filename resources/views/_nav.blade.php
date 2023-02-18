@@ -1,4 +1,7 @@
-<? use App\Fun ?>
+@php
+    use App\Fun;
+@endphp 
+
 <div class="pre-header text-end">
   <span class="no-movil"><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a> | </span><span><a href="tel:5491134885054"><i class="fa-brands fa-whatsapp"></i>(+549)11-3488-5054</a> | </span> 
 
@@ -49,7 +52,7 @@
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#menu">@lang('trans.MENÚ')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#galeria">@lang('trans.SALÓN')</a>
+              <a class="nav-link" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" href="https://player.vimeo.com/video/799159709?autoplay=1&amp;loop=1&amp;autopause=0" data-rel="lightcaseSalon:myCollection:slideshow">@lang('trans.SALÓN')</a>
             </li>
             <li class="nav-item">
               <a  href="#" class="nav-link SoundCloud" data-bs-toggle="modal" data-bs-target="#modalSoundCloud" >@lang('trans.MÚSICA')</a>
@@ -71,3 +74,4 @@
       </div>
     </div>
  </nav>
+

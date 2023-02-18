@@ -39,20 +39,12 @@
 
 
   <!-- soundcloud modal -->
-
   <div class="modal fade" id="modalSoundCloud" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-    
     <div class="modal-dialog" role="document">
-
         <div class="modal-content">
-
             <div class="modal-body">
-
                 {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-regular fa-circle-xmark"></i></button> --}}
-
                 <a data-bs-dismiss="modal" class="close-modal" href=""><i class="fa-solid fa-circle-xmark"></i></a>
-
-
                 <img src="{{ asset('images/CatuloOrquestaMP3.jpg') }}" class="img-fluid" />
 
                 <div class="sm2-bar-ui compact full-width flat" >
@@ -125,6 +117,8 @@
             </div>
         </div>
     </div>
+  
+
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 

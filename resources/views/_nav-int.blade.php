@@ -56,7 +56,7 @@
               <a class="nav-link" href="{{ route('home', app()->getLocale()) }}#menu">@lang('trans.MENÚ')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#galeria">@lang('trans.SALÓN')</a>
+              <a class="nav-link" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" href="https://player.vimeo.com/video/799159709?autoplay=1&amp;loop=1&amp;autopause=0" data-rel="lightcaseSalon:myCollection:slideshow">@lang('trans.SALÓN')</a>
             </li>
             <li class="nav-item">
               <a  href="#" class="nav-link SoundCloud" data-bs-toggle="modal" data-bs-target="#modalSoundCloud" >@lang('trans.MÚSICA')</a>
