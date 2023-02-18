@@ -213,7 +213,7 @@ a {color: white; text-decoration: none;}
 	width: 100%;
 	background-color: #b60017;
 	height: 25px;
-	z-index: 9999;
+	z-index: 9;
 	position: fixed;
 	color: white;
 	padding-right: 10px;

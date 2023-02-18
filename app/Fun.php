@@ -18,7 +18,7 @@ class Fun extends Model {
 				break;
 			
 			case '2':
-			return asset('images/principal/'. random_int(1, 3) );
+			return asset('images/principal/'. random_int(1, 4) );
 				break;
 			
 			case '3':
