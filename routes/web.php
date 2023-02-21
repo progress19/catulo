@@ -88,12 +88,21 @@ Route::post('capturePayPal', 'Controller@capturePaypal')->name('capturePayPal');
 
 Route::redirect('/', app()->getLocale());
 
+Route::get('vue', function () {
+    return view('vue');
+});
+
+Route::get('react', function () {
+    return view('react');
+});
+
 Route::group(['prefix' => '{language}'], function () {
 
     Route::get('/', ['uses' => 'Controller@viewHome'])->name('index');
     Route::get('home', ['uses' => 'Controller@viewHome'])->name('home');
     Route::get('menu', ['uses' => 'MenuController@viewMenu'])->name('menu');
     Route::get('show/{id}/{slug}', 'ShowController@viewShow')->name('show');
+    //Route::match(['get','post'],'show/{id}/{slug}','ShowController@viewShow')->name('show');
     Route::get('eventos', ['uses' => 'Controller@viewEventos'])->name('eventos');
 
 });

@@ -1,8 +1,8 @@
 @extends('layouts.frontLayout.front')
 @section('title', 'Home')    
-@include('_nav')  
 
 @section('content')
+@include('_nav')  
 
 <div id="home" style="background-color: black;">
      <div class="vimeo-wrapper">

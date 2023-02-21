@@ -213,7 +213,7 @@ a {color: white; text-decoration: none;}
 	width: 100%;
 	background-color: #b60017;
 	height: 25px;
-	z-index: 9;
+	z-index: 1031;
 	position: fixed;
 	color: white;
 	padding-right: 10px;
@@ -480,10 +480,6 @@ form {margin: 0;}
 	letter-spacing: 3px;
 }
 
-.detalle-show {
-	/*margin: 15px;	*/
-}
-
 #frmReserva label.error {
 	font-size: 13px;
 	background-color: red;
@@ -608,6 +604,8 @@ form {margin: 0;}
 	display: none;
 	
 }
+
+.loader {width: 100% !important;}
 
 
 

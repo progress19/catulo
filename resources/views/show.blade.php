@@ -2,15 +2,16 @@
 
 @extends('layouts.frontLayout.front')
 @section('title', 'Show')    
-@include('_nav-int')  
+
 @section('content')
+@include('_nav-int')  
 
 <!-- bootstrap-datepicker -->
 <link href="{{ asset('vendors/bootstrap-datepicker-1.9/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
 <link href="{{ asset('vendors/bootstrap-datepicker-1.9/css/bootstrap-datepicker.standalone.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<section class="conte-int">
+<section class="conte-int" id="app">
 
 	<div class="title-show">
 		{{ Show::getNombreShow($show->id) }}
@@ -22,19 +23,42 @@
 
 			<div class="col-md-6">
 				<div class="box-show-int">
-						<img src="{{ asset('pics/shows/large/'.$show->imagen) }}" class="img-fluid" alt="">	
-					<div class="show-incluye mt-4">@lang('trans.EL SERVICIO INCLUYE')</div>
+
+					<skeleton-image 
+					:url-imagen="{{ json_encode( asset('pics/shows/large/'.$show->imagen) ) }}" 
+					:width-imagen="600"
+					:height-imagen="400"></skeleton-image>
+
+						{{-- <img src="{{ asset('pics/shows/large/'.$show->imagen) }}" class="img-fluid" alt=""> --}}	
+						
+						<div class="show-incluye mt-3">
+
+							<skeleton-text 
+								:text="{{ json_encode( __('trans.EL SERVICIO INCLUYE') ) }}" 
+								:width-text="600"
+								:height-text="30">
+							</skeleton-text>
+						
+						</div>
+						
+						{{-- <div class="show-incluye mt-3">@lang('trans.EL SERVICIO INCLUYE')</div> --}}
 					<hr>
 					<div class="detalle-show">
 						<div class="row">
 							<div class="col-md-7">
+
 								{!! Show::getDescripcionShow($show->id) !!}	
+							
 							</div>	
 							<div class="col-md-5">
 								<div class="box-precio mx-2">
 									<div class="show-importe">
 
-										<span><b>USD {{ $show->precio }}</b></span><br>
+										<span><b> <skeleton-text :text="{{ json_encode( 'USD'.$show->precio ) }}" 
+											:width-text="600"
+											:height-text="30">
+										</skeleton-text></b></span>
+										
 										@lang('trans.Por persona')<br>
 									</div>
 								</div>
@@ -196,8 +220,11 @@
 
 @section('page-js-script')
 
-	@include('pay_scripts')  
+	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="{{ asset('js/front_js/jquery.validate.min.js') }}"></script>
 
+	@include('pay_scripts')  
+	
     <!-- bootstrap-datepicker -->
     <script src="{{ asset('vendors/bootstrap-datepicker-1.9/js/bootstrap-datepicker.min.js') }}"></script>
 
@@ -314,5 +341,7 @@
 		$('.input-group').on('click', '.button-minus', function(e) { decrementValue(e); });
 
 	</script>
+
+	
 
 @stop

@@ -1,9 +1,8 @@
-
 @extends('layouts.frontLayout.front')
 @section('title', 'Home')    
-@include('_nav-int')  
 
 @section('content')
+@include('_nav-int')  
 
 <section class="conte-int-eventos">
 
@@ -56,9 +55,7 @@
     <div class="clearfix"></div>   
 
 </section>
-
     
-
 @endsection
 
 @section('page-js-script')
