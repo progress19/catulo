@@ -1,6 +1,5 @@
 <template>
-    
-    <div :ref=refText> 
+    <div>
       
       <div v-if="!loaded" style="width:100%">
         <vue-skeleton-loader
@@ -12,10 +11,9 @@
           ></vue-skeleton-loader>
       </div>
     
-      <div v-show="loaded">{{ text }}</div>
+      <div v-show="loaded" @load="onLoad">{{ text }}</div>
 
     </div>
-
 </template>
   
   <script>
@@ -30,38 +28,19 @@
       };
     },
     methods: {
-      
-      handleIntersection(entries) {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-      
-            setTimeout(() => {
-              this.loaded = true;
-            }, 2000);
-
-          }
-        });
-      },
-      
       onLoad() {
         console.log('onload text');
         this.loaded = true;
       },
-
     },
     mounted() {
-      const observer = new IntersectionObserver(this.handleIntersection, {
-        rootMargin: '0px',
-        threshold: 1.0
-      });
-
-      observer.observe(this.$refs[this.refText]);
-
+      //this.loaded = true;
+      //console.log('Component text mounted');
+      setTimeout(() => {
+        this.loaded = true;
+      }, 2000);
     },
     props: {
-      refText: { type: String, required: true },
       text: { type: String, required: true },
       widthText:{ type: Number, required: true },
       heightText:{ type: Number, required: true },

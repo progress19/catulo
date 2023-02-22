@@ -27,10 +27,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 Vue.component('skeleton-image', require('./components/SkeletonImage.vue').default);
 Vue.component('skeleton-text', require('./components/SkeletonText.vue').default);
+Vue.component('inter-component', require('./components/InterComponent.vue').default);
 
-//import SkeletonLoaderVue from 'skeleton-loader-vue';
-//Vue.component('skeleton-loader', SkeletonLoaderVue);
-
+import 'intersection-observer';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

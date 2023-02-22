@@ -11,7 +11,7 @@
 <link href="{{ asset('vendors/bootstrap-datepicker-1.9/css/bootstrap-datepicker.standalone.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<section class="conte-int" id="app">
+<section class="conte-int">
 
 	<div class="title-show">
 		{{ Show::getNombreShow($show->id) }}
@@ -25,6 +25,7 @@
 				<div class="box-show-int">
 
 					<skeleton-image 
+					:ref-imagen= {{ json_encode( Str::random(10) ) }}
 					:url-imagen="{{ json_encode( asset('pics/shows/large/'.$show->imagen) ) }}" 
 					:width-imagen="600"
 					:height-imagen="400"></skeleton-image>
@@ -34,6 +35,7 @@
 						<div class="show-incluye mt-3">
 
 							<skeleton-text 
+								:ref-text = {{ json_encode( Str::random(10) ) }}
 								:text="{{ json_encode( __('trans.EL SERVICIO INCLUYE') ) }}" 
 								:width-text="600"
 								:height-text="30">
@@ -54,7 +56,9 @@
 								<div class="box-precio mx-2">
 									<div class="show-importe">
 
-										<span><b> <skeleton-text :text="{{ json_encode( 'USD'.$show->precio ) }}" 
+										<span><b>
+										<skeleton-text :text="{{ json_encode( 'USD'.$show->precio ) }}" 
+											:ref-text = {{ json_encode( Str::random(10) ) }}
 											:width-text="600"
 											:height-text="30">
 										</skeleton-text></b></span>
@@ -219,10 +223,7 @@
 @endsection
 
 @section('page-js-script')
-
-	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="{{ asset('js/front_js/jquery.validate.min.js') }}"></script>
-
+		
 	@include('pay_scripts')  
 	
     <!-- bootstrap-datepicker -->
@@ -341,7 +342,5 @@
 		$('.input-group').on('click', '.button-minus', function(e) { decrementValue(e); });
 
 	</script>
-
-	
 
 @stop

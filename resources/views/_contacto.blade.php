@@ -1,4 +1,4 @@
-<section id="contacto"><!-- Sigma Software -->
+<section id="contacto" class="app"><!-- Sigma Software -->
   
     <div class="container">
 
@@ -56,9 +56,13 @@
             <!-- right -->
 
             <div class="col-md-4 col-sm-12 info-contacto">
-                <h5>@lang('trans.UBICACIÓN')</h5>
+                
+                <h5><skeleton-text :ref-text = {{ json_encode( Str::random(10) ) }} :text = "{{ json_encode( __('trans.UBICACIÓN') ) }}"
+                :width-text="200" :height-text="20"></skeleton-text></h5>
+                
                 <p>Dr. Tomás Manuel de Anchorena 647</p>
                 <p>Abasto - Buenos Aires - Argentina</p>
+
 
                 <h5 class="mt-4">@lang('trans.HORARIOS DE ATENCIÓN')</h5>
                 <p>09:00hs @lang('trans.a') 20:00hs</p>
@@ -79,4 +83,10 @@
     </div>
 
 </section>
+
+@section('page-js-script')
+
+<script src="{{ asset('js/app.js') }}"></script>
+
+@stop
 
