@@ -12,7 +12,7 @@
           ></vue-skeleton-loader>
       </div>
     
-      <div v-show="loaded">{{ text }}</div>
+      <div v-show="loaded" class="animate__animated animate__fadeIn" >{{ text }}</div>
 
     </div>
 

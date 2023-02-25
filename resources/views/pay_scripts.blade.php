@@ -19,15 +19,15 @@ $(document).ready(function() {
                 var baseUrl = document.getElementById('baseUrl').value;
 
                 const element = document.querySelector('#completeForm');
-                element.classList.add('animate__animated', 'animate__fadeOutLeft');
+                element.classList.add('animate__animated', 'animate__fadeOut');
 
                 element.addEventListener('animationend', () => {
                     $('#completeForm').addClass('d-none');
                     $('#resumenReservaPago').removeClass('d-none');
                     const element_a = document.querySelector('#resumenReservaPago');
-                    element_a.classList.add('animate__animated', 'animate__fadeInRight');
-                    element.classList.remove('animate__animated', 'animate__fadeOutLeft');
-                    element_a.classList.remove('animate__animated', 'animate__fadeInRight');
+                    element_a.classList.add('animate__animated', 'animate__fadeIn');
+                    element.classList.remove('animate__animated', 'animate__fadeOut');
+                    element_a.classList.remove('animate__animated', 'animate__fadeIn');
                 });
 
                 $('#nombre_resumen').html( $('input[name="nombre"]').val() );

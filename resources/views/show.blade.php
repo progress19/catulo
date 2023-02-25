@@ -23,28 +23,32 @@
 
 			<div class="col-md-6">
 				<div class="box-show-int">
-
+				{{-- 
 					<skeleton-image 
-					:ref-imagen= {{ json_encode( Str::random(10) ) }}
-					:url-imagen="{{ json_encode( asset('pics/shows/large/'.$show->imagen) ) }}" 
-					:width-imagen="600"
-					:height-imagen="400"></skeleton-image>
+					:ref-image= {{ json_encode( Str::random(5) ) }}
+					:url-image="{{ json_encode( asset('pics/shows/large/'.$show->imagen) ) }}" 
+					:width-image="600"
+					:height-image="400"
+					:class-image = "{{ json_encode( 'img-fluid animate__animated animate__fadeIn' ) }}"
+					></skeleton-image>
+					--}}
 
-						{{-- <img src="{{ asset('pics/shows/large/'.$show->imagen) }}" class="img-fluid" alt=""> --}}	
+						<img src="{{ asset('pics/shows/large/'.$show->imagen) }}" class="img-fluid" alt="">
 						
 						<div class="show-incluye mt-3">
 
-							<skeleton-text 
+							{{--<skeleton-text 
 								:ref-text = {{ json_encode( Str::random(10) ) }}
 								:text="{{ json_encode( __('trans.EL SERVICIO INCLUYE') ) }}" 
 								:width-text="600"
 								:height-text="30">
-							</skeleton-text>
+							</skeleton-text>--}}
 						
 						</div>
 						
-						{{-- <div class="show-incluye mt-3">@lang('trans.EL SERVICIO INCLUYE')</div> --}}
-					<hr>
+						<div class="show-incluye mt-3">@lang('trans.EL SERVICIO INCLUYE')</div>
+					
+						<hr>
 					<div class="detalle-show">
 						<div class="row">
 							<div class="col-md-7">
@@ -56,13 +60,14 @@
 								<div class="box-precio mx-2">
 									<div class="show-importe">
 
-										<span><b>
-										<skeleton-text :text="{{ json_encode( 'USD'.$show->precio ) }}" 
+										<span><b>USD {{ $show->precio }}.</b></span><br>
+					{{--				<span><b>
+										<skeleton-text :text="{{ json_encode( 'USD'. ) }}" 
 											:ref-text = {{ json_encode( Str::random(10) ) }}
 											:width-text="600"
 											:height-text="30">
 										</skeleton-text></b></span>
-										
+					--}}					
 										@lang('trans.Por persona')<br>
 									</div>
 								</div>
@@ -233,7 +238,7 @@
     <script src="{{ asset('vendors/bootstrap-datepicker-1.9/locales/bootstrap-datepicker.es.min.js') }}"></script>
     <script src="{{ asset('vendors/bootstrap-datepicker-1.9/locales/bootstrap-datepicker.pr.min.js') }}"></script>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=Ac3PPcvSIeTdNRYFaBkPh4b21UD0c89OQUzUyyWKrXoc4yRmYk20pKzKdJ3trnFAMLY-na_KxEK2ecMg"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id={{ env('ENV_CLIENT_ID') }}"></script>
 
 	<script>
 
@@ -269,16 +274,16 @@
 			$('#paypal-button-container').html('');
 
 			const element = document.querySelector('#resumenReservaPago');
-            element.classList.add('animate__animated', 'animate__fadeOutLeft');
+            element.classList.add('animate__animated', 'animate__fadeOut');
 
                 element.addEventListener('animationend', () => {
                 
                     $('#resumenReservaPago').addClass('d-none');
                     $('#completeForm').removeClass('d-none');
                     const element_a = document.querySelector('#completeForm');
-                    element_a.classList.add('animate__animated', 'animate__fadeInRight');
-                    element.classList.remove('animate__animated', 'animate__fadeOutLeft');
-                    element_a.classList.remove('animate__animated', 'animate__fadeInRight');
+                    element_a.classList.add('animate__animated', 'animate__fadeIn');
+                    element.classList.remove('animate__animated', 'animate__fadeOut');
+                    element_a.classList.remove('animate__animated', 'animate__fadeIn');
                 
                 });
 

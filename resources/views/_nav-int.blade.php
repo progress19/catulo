@@ -1,7 +1,7 @@
 <? use App\Fun ?>
 
 <div class="pre-header text-end">
-  <span class="no-movil"><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a> | </span><span><a href="tel:5491134885054"><i class="fa-brands fa-whatsapp"></i> (+549)11-3488-5054</a> | </span> 
+  <span class="no-movil"><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a> | </span><span><a href="tel:5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a> | </span> 
 
   <a type="button" class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{{ Fun::getFlagLanguage() }}</a>
     
@@ -71,7 +71,7 @@
               <a class="nav-link" style="background-color: #b60017;" href="{{ route('home', app()->getLocale()) }}#shows">@lang('trans.RESERVAS')</a>
             </li>
             <li class="nav-item no-desk">
-              <a class="nav-link" href="https://api.whatsapp.com/send?phone=5491134885054"><i class="fa-brands fa-whatsapp"></i> (+54911) 3488-5054</a>              
+              <a class="nav-link" href="https://api.whatsapp.com/send?phone=5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a>              
             </li>
           </ul>
         </div>

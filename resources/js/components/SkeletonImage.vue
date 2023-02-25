@@ -1,10 +1,10 @@
 <template>
-  <div :ref=refImagen>
+  <div :ref=refImage>
     <div v-if="!loaded" style="width:100%">
-      <vue-skeleton-loader type="rect" :width=widthImagen :height=heightImagen animation="wave"></vue-skeleton-loader>
+      <vue-skeleton-loader type="rect" :width=widthImage :height=heightImage animation="wave"></vue-skeleton-loader>
     </div>
 
-    <img v-if="loaded" :src="urlImagen" class="img-fluid" />
+    <img v-if="loaded" :src="urlImage" :class=classImage />
 
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
           //console.log('adentro')
 
           const img = new Image();
-          img.src = this.urlImagen;
+          img.src = this.urlImage;
           img.onload = () => {
             //this.imageLoaded = true;
             //console.log('img cargada');
@@ -53,15 +53,16 @@ export default {
       threshold: 1.0
     });
 
-    observer.observe(this.$refs[this.refImagen]);
+    observer.observe(this.$refs[this.refImage]);
 
   },
 
   props: {
-    refImagen: { type: String, required: true },
-    urlImagen: { type: String, required: true },
-    widthImagen: { type: Number, required: true },
-    heightImagen: { type: Number, required: true },
+    refImage: { type: String, required: true },
+    urlImage: { type: String, required: true },
+    widthImage: { type: Number, required: true },
+    heightImage: { type: Number, required: true },
+    classImage: { type: String, required: true },
   }
 };
 

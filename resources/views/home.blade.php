@@ -23,20 +23,13 @@
 <script type="text/javascript">
 
     $('.moreless-button').click(function() {
-
       $('.moretext').slideToggle();
-
       if ( $('.moreless-button').text() == "<?= __('trans.Leer más') ?>" ) {
-
         $(this).text("<?= __('trans.Leer menos') ?>")
-
       } else {
-
         $(this).text("<?= __('trans.Leer más') ?>")
-
       }
     });
-
 
     AOS.init({
       easing: 'ease-in-cubic',

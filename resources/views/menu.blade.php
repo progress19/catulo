@@ -43,7 +43,7 @@
 
         <div class="row text-center text-white">
             <p><i class="fa-solid fa-phone"></i> <a href="tel:541163991032"> (+5411) 6399-1032</a></p>
-            <p><i class="fa-brands fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=541134885054"> (+54911) 3488-5054</a></p>
+            <p><i class="fa-brands fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=5491163991032"> (+549) 11-6399-1032</a></p>
             <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@catulotango.com">info@catulotango.com</a></p>
         </div>
 

@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
           //console.log('adentro')
 
           var img = new Image();
-          img.src = _this.urlImagen;
+          img.src = _this.urlImage;
           img.onload = function () {
             //this.imageLoaded = true;
             //console.log('img cargada');
@@ -118,23 +118,27 @@ __webpack_require__.r(__webpack_exports__);
       rootMargin: '0px',
       threshold: 1.0
     });
-    observer.observe(this.$refs[this.refImagen]);
+    observer.observe(this.$refs[this.refImage]);
   },
   props: {
-    refImagen: {
+    refImage: {
       type: String,
       required: true
     },
-    urlImagen: {
+    urlImage: {
       type: String,
       required: true
     },
-    widthImagen: {
+    widthImage: {
       type: Number,
       required: true
     },
-    heightImagen: {
+    heightImage: {
       type: Number,
+      required: true
+    },
+    classImage: {
+      type: String,
       required: true
     }
   }
@@ -293,7 +297,7 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    ref: _vm.refImagen
+    ref: _vm.refImage
   }, [!_vm.loaded ? _c("div", {
     staticStyle: {
       width: "100%"
@@ -301,14 +305,14 @@ var render = function render() {
   }, [_c("vue-skeleton-loader", {
     attrs: {
       type: "rect",
-      width: _vm.widthImagen,
-      height: _vm.heightImagen,
+      width: _vm.widthImage,
+      height: _vm.heightImage,
       animation: "wave"
     }
   })], 1) : _vm._e(), _vm._v(" "), _vm.loaded ? _c("img", {
-    staticClass: "img-fluid",
+    "class": _vm.classImage,
     attrs: {
-      src: _vm.urlImagen
+      src: _vm.urlImage
     }
   }) : _vm._e()]);
 };
@@ -353,7 +357,8 @@ var render = function render() {
       rawName: "v-show",
       value: _vm.loaded,
       expression: "loaded"
-    }]
+    }],
+    staticClass: "animate__animated animate__fadeIn"
   }, [_vm._v(_vm._s(_vm.text))])]);
 };
 var staticRenderFns = [];

@@ -57,25 +57,26 @@
 
             <div class="col-md-4 col-sm-12 info-contacto">
                 
+                <h5>@lang('trans.UBICACIÓN')</h5>
+{{-- 
                 <h5><skeleton-text :ref-text = {{ json_encode( Str::random(10) ) }} :text = "{{ json_encode( __('trans.UBICACIÓN') ) }}"
                 :width-text="200" :height-text="20"></skeleton-text></h5>
-                
+--}}                
                 <p>Dr. Tomás Manuel de Anchorena 647</p>
                 <p>Abasto - Buenos Aires - Argentina</p>
 
-
                 <h5 class="mt-4">@lang('trans.HORARIOS DE ATENCIÓN')</h5>
+                <p>@lang('trans.Lunes a sábados')</p>
                 <p>09:00hs @lang('trans.a') 20:00hs</p>
 
                 <h5 class="mt-4">@lang('trans.CENA SHOW')</h5>
-                <p>@lang('trans.Lunes a Domingo')</p>
-                <p>@lang('trans.Cena'): 20:30hs</p>
+                <p>@lang('trans.Viernes y sábados')</p>
+                <p>@lang('trans.Cena'): 20:00hs</p>
                 <p>Show: 22:00hs</p>
 
                 <h5 class="mt-4">@lang('trans.RESERVAS')</h5>
-                <p><a href="tel:541163991032"></a>@lang('trans.TEL')(+5411) 6399-1032</p>
-                <p><a href="https://api.whatsapp.com/send?phone=541134885054">Whatsapp (+54911) 3488-5054</a></p> 
-                <p><a href="mailto:info@catulotango.com">info@catulotango.com</a></p>
+                <p><a href="https://api.whatsapp.com/send?phone=5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a></p> 
+                <p><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a></p>
              </div>
 
         </div>

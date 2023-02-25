@@ -342,6 +342,7 @@ a {color: white; text-decoration: none;}
 
 .info-contacto p {
 	line-height: 0.5;
+	letter-spacing: 1px;
 }
 
 #google-map2 {
@@ -630,7 +631,7 @@ form {margin: 0;}
 
 	.info-contacto p {
  		line-height: 0.5;
-  	letter-spacing: 1px;
+  		letter-spacing: 1px;
 	}
 
 	#suscripcion { height: auto; }
