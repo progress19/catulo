@@ -25,9 +25,11 @@
     $('.moreless-button').click(function() {
       $('.moretext').slideToggle();
       if ( $('.moreless-button').text() == "<?= __('trans.Leer más') ?>" ) {
-        $(this).text("<?= __('trans.Leer menos') ?>")
+        $(this).text("<?= __('trans.Leer menos') ?>");
+        $('#div-gradient').removeClass('gradient-text');
       } else {
-        $(this).text("<?= __('trans.Leer más') ?>")
+        $(this).text("<?= __('trans.Leer más') ?>");
+        $('#div-gradient').addClass('gradient-text');
       }
     });
 
