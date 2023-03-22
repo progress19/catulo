@@ -6,9 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="csrf_token" content="{{ csrf_token() }}" />
 
-  <title>Catulo Tango - Show de Tango - Tango Show - Tango - Show de Tango y Foclore en Abasto - Barrio de Carlos Gardel - Dinner Tango Show - Cena Show - Jantar Tango Show - Cena + Show - Tango Show BA - Tango Buenos Aires -  Argentina Tango</title>
+  <title>Cátulo Tango Show - El Mejor Espectáculo de Tango en Buenos Aires</title>
+  <meta name="description" content="Reserva tu lugar en Cátulo Tango Show y disfruta de una noche mágica de tango y cena en Buenos Aires. Conoce a los mejores bailarines y músicos del auténtico tango argentino.">
+  <meta name="keywords" content="catulo tango, catulo tango show, espectáculo de tango, cena show de tango, buenos aires, tango argentino, catulo tango, catulo tango show, tango show, dinner tango show, tango show ba, cena show de tango, buenos aires, tango">
+  <meta name="author" content="Cátulo Tango Show">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="canonical" href="https://catulotango.com/es">
+  <meta property="og:title" content="Cátulo Tango Show - El Mejor Espectáculo de Tango en Buenos Aires">
+  <meta property="og:description" content="Reserva tu lugar en Cátulo Tango Show y disfruta de una noche mágica de tango y cena en Buenos Aires. Conoce a los mejores bailarines y músicos del auténtico tango argentino.">
+  <meta property="og:image" content="https://catulotango.com/images/img-video.jpg">
+  <meta property="og:url" content="https://catulotango.com/es">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:title" content="Cátulo Tango Show - El Mejor Espectáculo de Tango en Buenos Aires">
+  <meta name="twitter:description" content="Reserva tu lugar en Cátulo Tango Show y disfruta de una noche mágica de tango y cena en Buenos Aires. Conoce a los mejores bailarines y músicos del auténtico tango argentino.">
+  <meta name="twitter:image" content="https://catulotango.com/images/img-video.jpg">
+  <meta name="twitter:card" content="summary_large_image">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{{ asset('css/front_css/galeria.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/front_css/aos.css') }}" />

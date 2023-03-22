@@ -1,5 +1,4 @@
 @extends('layouts.frontLayout.front')
-@section('title', 'Home')    
 
 @section('content')
 @include('_nav')  
