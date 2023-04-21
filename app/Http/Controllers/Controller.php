@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App;
 use Lang;
 
-
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -146,17 +145,13 @@ class Controller extends BaseController {
             $message->subject( __('trans.Contacto desde Cátulo Tango') );
 
             //destinatarios
-
             $config = Config::where( ['id'=>1] )->first();
 
             $destinatarios = explode(',', $config->destinatarios);
-
             foreach ($destinatarios as $destinatario) {
                 $message->to($destinatario, 'Cátulo Tango');  
             }
-
             $message->to($request->email, $request->nombre);
-            
         });
          
         return '<div style="padding-top:40px"><span style="font-size:30px"><i class="fas fa-check"></i></span><br>'.__("trans.GRACIAS POR SU CONSULTA!").' </div>';
