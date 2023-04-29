@@ -9,10 +9,8 @@ use App\Fun;
 use Yajra\Datatables\Datatables;
 
 class MenuController extends Controller {
-    
-    
+        
     public function viewMenu() {  //front
-
         $menus = Menu::get();        
 
       /*
@@ -36,39 +34,27 @@ class MenuController extends Controller {
                 }    
             
         }
-
         */
-
         return view('menu')->with(compact($menus));
-    
     }
 
     public function getData() {
-               
         $menus = Menu::select();
-
         return Datatables::of($menus)
-
             ->addColumn('nombre', function ($menu) {
                 return "<a href='edit-menu/$menu->id'>$menu->nombre</a>"; 
             })
-
             ->addColumn('es', function ($menu) {
                 return "<a target='new' href='".asset('pics/menus/large/'.$menu->es)."'>$menu->es</a>"; 
             })
-
             ->addColumn('en', function ($menu) {
                 return "<a target=_new' href='".asset('pics/menus/large/'.$menu->en)."'>$menu->en</a>"; 
             })
-
             ->addColumn('pr', function ($menu) {
                 return "<a target='new' href='".asset('pics/menus/large/'.$menu->pr)."'>$menu->pr</a>"; 
             })
-
             ->rawColumns(['nombre','es','en','pr'])
-
             ->make(true);
-
     }
 
     public function viewMenus() {
@@ -118,16 +104,10 @@ class MenuController extends Controller {
                 'en' => $filename_en,
                 'pr' => $filename_pr,
             ]);
-            
             return redirect('/admin/view-menus')->with('flash_message','Menú actualizado correctamente...');
-        
         }
 
         $menu = Menu::where(['id'=>$id])->first();
-       
         return view('admin.menus.edit_menu')->with(compact('menu'));
-    
     }
-
-
 }

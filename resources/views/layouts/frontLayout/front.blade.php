@@ -23,6 +23,11 @@
   <meta name="twitter:description" content="Reserva tu lugar en Cátulo Tango Show y disfruta de una noche mágica de tango y cena en Buenos Aires. Conoce a los mejores bailarines y músicos del auténtico tango argentino.">
   <meta name="twitter:image" content="https://catulotango.com/images/img-video.jpg">
   <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
     
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -41,6 +46,10 @@
 
     <script src="{{ asset('vendors/soundmanager/script/demo.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('vendors/soundmanager/css/demo.css') }}" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB1SNCGBVT"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZB1SNCGBVT'); </script>
 
 </head>
 

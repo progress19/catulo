@@ -160,6 +160,16 @@
 
 <p style="margin: 5px 0 ; font-size: 14px; mso-line-height-alt: 25.2px;">@lang('trans.TOTAL A PAGAR'): USD {{ $total }}.</p>
 
+<p>
+    Palermo zone: 07:00 PM to 07:30 PM <br>       
+    Downtown zone: 07:30 PM to 08:00 PM    
+</p>
+<p>
+    Dropoff: <br>
+    After Show
+</p>
+<p>Wait in your Hotel Lobby</p>
+
                                                                     </div>
 
                                                                 </div>
@@ -199,7 +209,6 @@
                                                                             <td style="padding:0 7px 0 7px;"><a href="https://twitter.com/catulotango" target="_blank">
                                                                                 <img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-circle-dark-gray/twitter@2x.png" width="32" height="32" alt="twitter" title="twitter" style="display: block; height: auto; border: 0;"></a>
                                                                             </td>
-
                                                                             
                                                                         </tr>
                                                                     </table>

@@ -625,6 +625,16 @@ form {margin: 0;}
     -webkit-text-fill-color: transparent;
 }
 
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+	text-decoration: line-through;
+	font-weight: 400;
+}
+
+.datepicker td {
+	border-radius: 0 !important;
+	background-color: #eaeaea;
+	font-weight: 600;
+}
 
 /*responsive*/
 

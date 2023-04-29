@@ -25,12 +25,10 @@ class Controller extends BaseController {
     }
     
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
     
         public function capturePayPal(Request $request) {
 
             $show = Show::where( [ 'id' => $this->hashids->decode($request->paymentReference)[0] ] )->first();
-
             $model = new Reserva;
             
                 $model->orderId = $request->orderId;
@@ -41,24 +39,17 @@ class Controller extends BaseController {
                 $model->payerName = $request->payerName;
                 $model->paymentAmount = $request->paymentAmount;
                 $model->paymentAmountId = $request->paymentAmountId;
-
                 $model->idShow = $this->hashids->decode($request->paymentReference)[0];
-
                 $model->nombre = $request->nombre;
                 $model->apellido = $request->apellido;
                 $model->email = $request->email;
                 $model->telefono = $request->whatsapp;
-
                 $model->hotel = $request->hotel;
                 $model->fecha = \Carbon\Carbon::createFromFormat('d/m/Y', $request->fecha);
-
                 $model->adultos = $request->adultos;
                 $model->menores = $request->menores;
-
                 $model->precio_show = $show->precio;
-
                 $model->total = $request->total_total;
-
                 $model->save();
 
                 /* email send */
@@ -83,53 +74,38 @@ class Controller extends BaseController {
                 ];
 
                 \Mail::send('emails.reserva', $data, function($message) use ($request) {
-                
                 //remitente
                 $message->from('info@catulotango.com', 'Cátulo Tango');
-
                 //asunto
                 $message->subject( __('trans.Reserva Cátulo Tango') );
-
                 //destinatarios
                 $config = Config::where( ['id'=>1] )->first();
-
                 $destinatarios = explode(',', $config->destinatarios);
 
                 foreach ($destinatarios as $destinatario) {
                     $message->to($destinatario, 'Cátulo Tango');  
                 }
-
                 $message->to($request->email, $request->nombre);
-                
             });
-
         }
 
     public function viewEventos() {
-
         $random_number_array = range(1, 19);
         shuffle($random_number_array );
         $arrays = array_slice($random_number_array ,0,16);
-    
         return view('eventos')->with(['arrays' => $arrays]);
-
     }
 
     public function viewHome() {
-
         $imgsHome = ImgsHome::where('estado','=',1)->inRandomOrder()->limit(12)->get();
         $shows = Show::where('estado','=',1)->get();
-
         return view('home')->with([
             'imgsHome' => $imgsHome,
             'shows' => $shows
         ]);
-
     }
 
-
     public function enviarContacto(Request $request) {
-
         sleep(1);
         App::setLocale($request->locale);
 
