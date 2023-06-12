@@ -25,6 +25,27 @@ class Controller extends BaseController {
     }
     
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+        public function testEmail(Request $request) {
+
+            /**/
+            
+            $config = Config::where(['id' => 1])->first();
+            $data = [];
+
+            //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
+            \Mail::send('emails.test', $data, function ($message) use ($config) {
+                //remitente
+                $message->from('noreply@xxxxxxxx.com', 'xxxxxxxx.com');
+
+                //asunto
+                $message->subject('TEST xxxxxxxx xxxxxxxx');
+
+                $message->to('mauriciolav@gmail.com', 'xxxxxxxx.com');
+
+                
+            });
+        }
     
         public function capturePayPal(Request $request) {
 

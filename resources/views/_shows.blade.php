@@ -46,6 +46,10 @@
 
 	   	</div>
 
+		<div class="text-center">
+			<a class="btn btn-menu mb-4" target="new" href="https://api.whatsapp.com/send?phone=5491163991032">@lang('trans.TARIFAS PARA RESIDENTES')</a>
+		</div><br>
+
     </div>	
     
 </section>

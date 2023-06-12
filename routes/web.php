@@ -97,13 +97,15 @@ Route::get('react', function () {
 });
 
 Route::group(['prefix' => '{language}'], function () {
-
+    
     Route::get('/', ['uses' => 'Controller@viewHome'])->name('index');
     Route::get('home', ['uses' => 'Controller@viewHome'])->name('home');
     Route::get('menu', ['uses' => 'MenuController@viewMenu'])->name('menu');
     Route::get('show/{id}/{slug}', 'ShowController@viewShow')->name('show');
     //Route::match(['get','post'],'show/{id}/{slug}','ShowController@viewShow')->name('show');
     Route::get('eventos', ['uses' => 'Controller@viewEventos'])->name('eventos');
+
+    Route::get('testEmail', ['uses' => 'Controller@testEmail'])->name('testEmail');
 
 });
 
