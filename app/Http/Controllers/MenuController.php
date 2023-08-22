@@ -90,7 +90,7 @@ class MenuController extends Controller {
                  
             } else {$filename_en = $data['current_file_en'];}
 
-            //upload en
+            //upload pr
             if ($request->hasFile('pr')) {
 
                 $file = $request->file('pr');

@@ -3,27 +3,23 @@
 @endphp 
 
 <div class="pre-header text-end">
-  <span class="no-movil"><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a> | </span><span><a href="tel:5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a> | </span> 
+  <span class="no-movil"><a href="mailto:reservas@catulotango.com">reservas@catulotango.com</a> | </span><span><a target="new" href="https://api.whatsapp.com/send?phone=5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a> | </span> 
 
   <a type="button" class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{{ Fun::getFlagLanguage() }}</a>
     
     <ul class="dropdown-menu dropdown-menu-end">
-
             <li>
               <a href="{{ route( Route::currentRouteName() ,'es') }}" class="dropdown-item" >{{ HTML::image(asset('images/argentina-flag.png'), null, array('style' => 'height:24px')) }}  @lang('trans.Español')
               </a>
             </li>
-            
             <li>
               <a href="{{ route( Route::currentRouteName() ,'en') }}" class="dropdown-item" >{{ HTML::image(asset('images/united-kingdom-flag.png'), null, array('style' => 'height:24px')) }} @lang('trans.Inglés')
               </a>
             </li>
-            
             <li>
               <a href="{{ route( Route::currentRouteName() ,'pr') }}" class="dropdown-item" >{{ HTML::image(asset('images/brasil-flag.png'), null, array('style' => 'height:24px')) }} @lang('trans.Portugués')
               </a>
             </li>
-      
     </ul>
 
 </div>

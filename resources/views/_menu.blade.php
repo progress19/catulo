@@ -12,20 +12,20 @@
         <div class="row g-0">
             <div class="col-md-4">
                 <a class="overlay" href="{{ asset('images/entradas/1.jpg') }}" title="{{ Menu::getTitleImgMenu(1, 1) }}" data-rel="lightcase-1:myCollection:slideMenu">
-                    <!--<img src="{{ Fun::getUrlImageMenuHome(1) }}.jpg" class="img-fluid" alt="">-->
-                    <img src="{{ asset('images/entradas/1.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ Fun::getUrlImageMenuHome(1) }}.jpg" class="img-fluid" alt="">
+                    {{-- <img src="{{ asset('images/entradas/1.jpg') }}" class="img-fluid" alt=""> --}}
                 </a>
             </div>
             <div class="col-md-4">
                 <a class="overlay" href="{{ asset('images/principal/1.jpg') }}" title="{{ Menu::getTitleImgMenu(2, 1) }}" data-rel="lightcase-2:myCollection:slideMenu">
-                    <!--<img src="{{ Fun::getUrlImageMenuHome(2) }}.jpg" class="img-fluid" alt="">-->
-                    <img src="{{ asset('images/principal/1.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ Fun::getUrlImageMenuHome(2) }}.jpg" class="img-fluid" alt="">
+                    {{-- <img src="{{ asset('images/principal/1.jpg') }}" class="img-fluid" alt=""> --}}
                 </a>
             </div>
             <div class="col-md-4">
                 <a class="overlay" href="{{ asset('images/postres/1.jpg') }}" title="{{ Menu::getTitleImgMenu(3, 1) }}" data-rel="lightcase-3:myCollection:slideMenu">
-                    <!--<img src="{{ Fun::getUrlImageMenuHome(3) }}.jpg" class="img-fluid" alt="">-->
-                    <img src="{{ asset('images/postres/1.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ Fun::getUrlImageMenuHome(3) }}.jpg" class="img-fluid" alt="">
+                    {{--<img src="{{ asset('images/postres/1.jpg') }}" class="img-fluid" alt="">--}}
                 </a>
             </div>
         </div>

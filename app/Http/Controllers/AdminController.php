@@ -23,22 +23,13 @@ class AdminController extends Controller {
             if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'] ])) {
     		
                 if (Auth::user()->estado==1) {
-                
                     Session::put('adminSession', $data['email']);
-        
                     return redirect('/admin/dashboard')->with('flash_message','Bienvenido, '.Auth::user()->name.' :)');
-
                 } else {
-
                     return redirect('/admin')->with('flash_message','Usuario desactivado');
-
                 }
-                
-    		
             } else {
-    		
             	return redirect('/admin')->with('flash_message','Usuario o contraseña incorrecta.');
-    		
             }
     	}
     	return view('admin.admin_login');

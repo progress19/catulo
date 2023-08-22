@@ -18,11 +18,8 @@ $("#add_show").validate({
     debug: true,errorElement: "label",
 
     submitHandler: function(form) {
-
        // alert('asd');
-
         $('#add_show')[0].submit();
-
     }
 });
 

@@ -12,26 +12,18 @@ use Hashids\Hashids;
 class ShowController extends Controller {
 
     public function __construct() {
-        
         $this->hashids = new Hashids();
-    
     }
 
     public static function calculateTotal() {
-
-        //$adultos = 
+       //$adultos = 
         $show = Show::where( ['id' => $_REQUEST['id'] ] )->first();
-        
         return $_REQUEST['adultos'] * $show->precio + $_REQUEST['menores'] * $show->precio / 2;
-        
     }
 
     public function viewShow($locale, $id, $slug) {
-
         $show = Show::where( ['id' => $this->hashids->decode($id)[0]] )->first();
-
         return view('show')->with(compact('show'));
-
     }
 
     public function getData() {
@@ -100,7 +92,6 @@ class ShowController extends Controller {
                     $extension = $image_tmp->getClientOriginalExtension();
                     $filename = rand(0000000,9999999).'.'.$extension;
                     
-
                     //dd(Fun::getPathImage('large','show',$filename));
 
                     //Resize image

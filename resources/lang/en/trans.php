@@ -3,6 +3,3 @@
     $array = Traduccion::getTrad('en');
     return $array;
 ?>
-
-
-

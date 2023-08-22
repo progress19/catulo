@@ -284,9 +284,7 @@
                 element.classList.remove('animate__animated', 'animate__fadeOut');
                 element_a.classList.remove('animate__animated', 'animate__fadeIn');
             });
-            $('html, body').stop().animate({
-                scrollTop: $("#completeForm").offset().top - 113
-            }, 1000);
+            $('html, body').stop().animate({scrollTop: $("#completeForm").offset().top - 113}, 1000);
         }
 
 		$('.datespicker').datepicker({

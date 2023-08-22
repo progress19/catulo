@@ -12,6 +12,8 @@ class Show extends Model {
 
     public function getSlugAttribute() {
 
+        $slug = $this->attributes['titulo_es'];
+
         switch ( app()->getLocale() ) {
             case 'es':
                 $slug = $this->attributes['titulo_es'];
@@ -23,7 +25,7 @@ class Show extends Model {
                 $slug = $this->attributes['titulo_en'];
                 break;
         }        
-
+        
         return Str::slug( $slug );
     
     }
