@@ -70,7 +70,7 @@
                 <p>09:00hs @lang('trans.a') 20:00hs</p>
 
                 <h5 class="mt-4">@lang('trans.CENA SHOW')</h5>
-                <p>@lang('trans.Viernes y sábados')</p>
+                <p>@lang('trans.Jueves, viernes y sábados')</p>
                 <p>@lang('trans.Cena'): 20:00hs</p>
                 <p>Show: 22:00hs</p>
 

@@ -303,7 +303,7 @@
 		            return [false, ''];
 		        }
 		    },
-		    daysOfWeekDisabled: "0,1,2,3,4" // Deshabilitar días de la semana excepto viernes y sábado (0 = domingo, 1 = lunes, etc.)
+		    daysOfWeekDisabled: "0,1,2,3" // Deshabilitar días de la semana excepto jueves, viernes y sábado (0 = domingo, 1 = lunes, etc.)
 		});
 
         function incrementValue(e) {
