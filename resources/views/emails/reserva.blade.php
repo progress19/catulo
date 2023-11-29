@@ -160,10 +160,7 @@
 
 <p style="margin: 5px 0 ; font-size: 14px; mso-line-height-alt: 25.2px;">@lang('trans.TOTAL A PAGAR'): USD {{ $total }}.</p>
 
-<p>
-    Palermo zone: 07:00 PM to 07:30 PM <br>       
-    Downtown zone: 07:30 PM to 08:00 PM    
-</p>
+<p>Pickup schedule: 7:30 PM - 8:15 PM</p>
 <p>
     Dropoff: <br>
     After Show
