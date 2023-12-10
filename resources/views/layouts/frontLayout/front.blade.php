@@ -36,9 +36,9 @@
   <link rel="stylesheet" href="{{ asset('css/front_css/lightcase.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/front_css/styles.css') }}"> 
 
-  <link href="{{ asset('css/front_css/fontawesome.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/front_css/brands.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/front_css/solid.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/front_css/fontawesome/fontawesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/front_css/fontawesome/brands.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/front_css/fontawesome/solid.min.css') }}" rel="stylesheet">
 
     <script type="text/javascript" src="{{ asset('vendors/soundmanager/script/soundmanager2.js') }}"></script>
     <script src="{{ asset('vendors/soundmanager/script/bar-ui.js') }}"></script>
@@ -148,7 +148,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src=" {{ asset('js/front_js/aos.js') }}"></script>
-<script type="text/javascript" src=" {{ asset('js/front_js//lightcase.js') }}"></script>
+<script type="text/javascript" src=" {{ asset('js/front_js/lightcase.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.5/jquery.mobile-events.js"></script>
 
 <script src="{{ asset('js/front_js/scripts.js') }}"></script>
