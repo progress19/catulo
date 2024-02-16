@@ -62,6 +62,7 @@
 
     @include('_contacto')  
     @include('_suscripcion')  
+    @include('_catulo') 
     @include('_footer') 
 
   <!-- soundcloud modal -->

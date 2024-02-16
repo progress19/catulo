@@ -9,8 +9,7 @@
         </iframe>
     </div>
 </div>
-    
-@include('_catulo') 
+
 @include('_galeria')
 @include('_menu') 
 @include('_shows')    

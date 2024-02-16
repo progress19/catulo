@@ -167,6 +167,8 @@
 </p>
 <p>Wait in your Hotel Lobby</p>
 
+<p>@lang('trans.Atención: Por favor informar por mail : reservas@catulotango.com o por Whatsapp:+5491163991032 , dirección, número de habitación o apartamento y piso de dónde se encuentran hospedados (Centro, Recoleta o Palermo) para facilitar el traslado hacia nuestro establecimiento. Está información será solicitada 24 HS antes de ingresar al show. Las reservas que no presenten está información, no contarán con el servicio de transporte. Válido solo para Cena Show Tradicional y Cena Show VIP.')</p>
+
                                                                     </div>
 
                                                                 </div>
