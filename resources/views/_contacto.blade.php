@@ -67,12 +67,12 @@
 
                 <h5 class="mt-4">@lang('trans.HORARIOS DE ATENCIÓN')</h5>
                 <p>@lang('trans.Lunes a sábados')</p>
-                <p>09:00hs @lang('trans.a') 20:00hs</p>
+                <p>@lang('trans.09:00hs') @lang('trans.a') @lang('trans.20:00hs')</p>
 
                 <h5 class="mt-4">@lang('trans.CENA SHOW')</h5>
                 <p>@lang('trans.Jueves, viernes y sábados')</p>
-                <p>@lang('trans.Cena'): 20:00hs</p>
-                <p>Show: 22:00hs</p>
+                <p>@lang('trans.Cena'): @lang('trans.20:00hs')</p>
+                <p>Show: @lang('trans.21:30hs')</p>
 
                 <h5 class="mt-4">@lang('trans.RESERVAS')</h5>
                 <p><a href="https://api.whatsapp.com/send?phone=5491163991032"><i class="fa-brands fa-whatsapp"></i> (+549) 11-6399-1032</a></p> 
