@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{ asset('/images/CatuloTango.svg') }}" class="img-fluid" style="width:150px">
+        <img src="{{ asset('/images/CatuloTango.svg') }}" class="img-fluid" style="max-width:150px !important">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
         <span class="navbar-toggler-icon"></span>

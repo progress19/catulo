@@ -12,6 +12,7 @@
             <a href="https://instagram.com/catulotango" class="mx-2" target="new"><i class="fa-brands fa-square-instagram"></i></a>
             <a href="https://www.facebook.com/CatuloTangoOficial/" class="mx-2" target="new"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="https://twitter.com/catulotango" class="mx-2" target="new"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@Catulo-Tango" class="mx-2" target="new"><i class="fa-brands fa-square-youtube"></i></a>
         </div>
              
         <!-- Plugin de TripAdvisor centrado -->

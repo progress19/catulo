@@ -119,7 +119,7 @@
                                     </div>
 
                                     <div class="col-md-6 col-12 mb-3 ">
-                                        <label for="basic-url" class="form-label">Hotel</label>
+                                        <label for="basic-url" class="form-label">@lang('trans.Hotel / Airbb + Dirección')</label>
                                         <input type="text" class="form-control" name="hotel">
                                     </div>
 
@@ -194,7 +194,7 @@
                                 <p>Whatsapp: <span id="whatsapp_resumen"></span>.</p>
                                 <p>Email: <span id="email_resumen"></span>.</p>
                                 <p>@lang('trans.Fecha'): <span id="fecha_resumen"></span>.</p>
-                                <p>Hotel: <span id="hotel_resumen"></span>.</p>
+                                <p>@lang('trans.Hotel / Airbb + Dirección'): <span id="hotel_resumen"></span>.</p>
                                 <p>@lang('trans.Adultos'): <span id="adultos_resumen"></span>.</p>
                                 <p>@lang('trans.Menores'): <span id="menores_resumen"></span>.</p>
 
