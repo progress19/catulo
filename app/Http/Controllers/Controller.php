@@ -18,6 +18,8 @@ use App\Fun;
 use App\Reserva;
 use Hashids\Hashids;
 
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class Controller extends BaseController {
 
     public function __construct() {
@@ -27,9 +29,6 @@ class Controller extends BaseController {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
         public function testEmail(Request $request) {
-
-            /**/
-            
             $config = Config::where(['id' => 1])->first();
             $data = [];
 
@@ -37,12 +36,9 @@ class Controller extends BaseController {
             \Mail::send('emails.test', $data, function ($message) use ($config) {
                 //remitente
                 $message->from('noreply@xxxxxxxx.com', 'xxxxxxxx.com');
-
                 //asunto
                 $message->subject('TEST xxxxxxxx xxxxxxxx');
-
                 $message->to('mauriciolav@gmail.com', 'xxxxxxxx.com');
-
                 
             });
         }
@@ -93,6 +89,13 @@ class Controller extends BaseController {
                     'precio' => $show->precio,
                     'total' => $request->total_total,
                 ];
+
+                // Generar PDF
+                $pdf = Pdf::loadView('pdf.reserva', $data);
+                
+                // Guardar PDF temporalmente
+                $pdfPath = storage_path('app/public/vouchers/' . $model->id . '.pdf');
+                $pdf->save($pdfPath);
 
                 \Mail::send('emails.reserva', $data, function($message) use ($request) {
                 //remitente
