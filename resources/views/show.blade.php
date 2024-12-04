@@ -200,7 +200,7 @@
 
                             </div>
 
-                            <div class="col-5">
+                            <div class="col-md-5">
                                 <button onclick="editar()" class="btn btn-reservar float-end">@lang('trans.EDITAR')</button>
                             </div>
 

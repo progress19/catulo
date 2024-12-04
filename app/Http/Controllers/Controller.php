@@ -88,13 +88,15 @@ class Controller extends BaseController {
                     'fecha' => $request->fecha,
                     'precio' => $show->precio,
                     'total' => $request->total_total,
+                    'nro_reserva' => $model->id,
+                    'orderId' => $model->orderId
                 ];
 
                 // Generar PDF
                 $pdf = Pdf::loadView('pdf.reserva', $data);
                 
                 // Guardar PDF temporalmente
-                $pdfPath = storage_path('app/public/vouchers/' . $model->id . '.pdf');
+                $pdfPath = storage_path('app/public/vouchers/' . $model->orderId . '.pdf');
                 $pdf->save($pdfPath);
 
                 \Mail::send('emails.reserva', $data, function($message) use ($request) {
@@ -111,6 +113,10 @@ class Controller extends BaseController {
                 }
                 $message->to($request->email, $request->nombre);
             });
+            return response()->json([
+                'success' => true,
+                'voucherLink' => asset('storage/vouchers/' . $model->orderId . '.pdf'),
+            ]);
         }
 
     public function viewEventos() {
