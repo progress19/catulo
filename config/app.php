@@ -233,7 +233,6 @@ return [
         'Carbon' => 'Carbon\Carbon', 
         'Image' => Intervention\Image\ImageManagerStatic::class,
         
-
     ],
 
 ];

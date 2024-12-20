@@ -115,7 +115,8 @@ class Controller extends BaseController {
             });
             return response()->json([
                 'success' => true,
-                'voucherLink' => asset('storage/vouchers/' . $model->orderId . '.pdf'),
+                //'voucherLink' => asset('storage/vouchers/' . $model->orderId . '.pdf'),
+                'voucherLink' => asset(env('ENV_STORAGE_VOUCHERS') . $model->orderId . '.pdf'),
             ]);
         }
 

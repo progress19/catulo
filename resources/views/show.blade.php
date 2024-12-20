@@ -113,9 +113,9 @@
                                     </div>
 
 
-                                    <div class="col-md-6 col-12 mb-3 ">
+                                    <div class="col-md-6 col-12 mb-3">
                                         <label for="basic-url" class="form-label">@lang('trans.Fecha de su visita')</label>
-                                        <input type="text" class="form-control datespicker" name="fecha">
+                                        <input type="text" class="form-control datespicker" name="fecha" readonly="readonly">
                                     </div>
 
                                     <div class="col-md-6 col-12 mb-3 ">
